@@ -25,6 +25,8 @@ const students = [
 
 // 1. Log each student’s name and grade
 
+students.forEach((student) => console.log(student.name, student.grade))
+
 ```
 
 ### Part 2: Practice with `filter`
@@ -34,6 +36,9 @@ Using the same `students` array, use `filter` to:
 
 ```javascript
 const topStudents = 
+console.log(topStudents)
+
+const topStudents = students.filter((student) => (student.grade > 80))
 console.log(topStudents)
 ```
 
