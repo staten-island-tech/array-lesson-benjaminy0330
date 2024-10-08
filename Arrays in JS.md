@@ -45,7 +45,7 @@ console.log(topStudents)
 2. **Filter students who are 21 or younger**.
 
 ```javascript
-const youngStudents =
+const youngStudents = students.filter((student) => (student.age <= 21))
 ```
 
 ### Part 3: Combined `forEach` and `filter`
@@ -53,12 +53,17 @@ const youngStudents =
 1. **Log the names of students who scored above 80**.
 
 ```javascript
+const topStudents = students.filter((student) => (student.grade > 80))
+topStudents.forEach((student) => console.log(student.name, student.grade))
+
 
 ```
 
 2. **Log the names of students 21 or younger**.
 
 ```javascript
+const youngStudents = students.filter((student) => (student.age <= 21))
+youngStudents.forEach((student) => console.log(student.name))
 
 ```
 
@@ -85,13 +90,14 @@ const products = [
 1. **Display Product Details**: Log the name and price of each product.
 
 ```javascript
+products.forEach((product) => console.log(product.name, product.price))
 
 ```
 
 2. **Increase Price**: Increase the price of each product by 10% and log the updated products.
 
 ```javascript
-
+products.forEach((product) => console.log(product.name, product.price*1.1))
 ```
 
 3. **Summarize Categories**: Use `forEach` to create a list of all unique categories in the products array.
@@ -125,6 +131,8 @@ console.log('Expensive Products:', expensiveProducts);
 3. **Highly Rated Products**: Filter products with a rating of 4.5 or above.
 
 ```javascript
+const rated = products.filter((product) => (product.rating >= 4.5))
+console.log(`Highly Rated Products:`, rated);
 
 ```
 
